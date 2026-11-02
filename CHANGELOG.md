@@ -7,6 +7,9 @@ dự án tuân theo [Semantic Versioning](https://semver.org/lang/vi/).
 
 ## [Unreleased]
 
+### Added
+- `Cart.sort_by_title()`, `Cart.sort_by_cost()`: sắp xếp giỏ hàng theo tiêu đề / theo giá
+
 ## [1.0.0] - 2026-11-02
 
 ### Added

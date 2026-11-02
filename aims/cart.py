@@ -26,6 +26,14 @@ class Cart:
     def total_cost(self):
         return sum(item.cost for item in self.items)
 
+    def sort_by_title(self):
+        """Sắp xếp giỏ theo tiêu đề (A→Z), cùng tiêu đề thì giá giảm dần."""
+        self.items.sort(key=lambda dvd: (dvd.title.lower(), -dvd.cost))
+
+    def sort_by_cost(self):
+        """Sắp xếp giỏ theo giá giảm dần, cùng giá thì theo tiêu đề (A→Z)."""
+        self.items.sort(key=lambda dvd: (-dvd.cost, dvd.title.lower()))
+
     def total_cost_with_discount(self, percent):
         """Tổng tiền sau khi giảm giá percent %."""
         if not 0 <= percent <= 100:
