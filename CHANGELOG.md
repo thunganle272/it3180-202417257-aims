@@ -13,6 +13,14 @@ dự án tuân theo [Semantic Versioning](https://semver.org/lang/vi/).
 - `Cart.sort_by_title()`, `Cart.sort_by_cost()`: sắp xếp giỏ hàng theo tiêu đề / theo giá
 - `search_by_category()` trong `aims/search.py`: tìm đĩa theo thể loại
 
+### Fixed
+- `search_by_title` phân biệt hoa thường (#21) – bản sửa từ 1.0.1
+
+## [1.0.1] - 2026-11-02
+
+### Fixed
+- `search_by_title` phân biệt hoa thường: tìm "lion" không ra "The Lion King" (#21)
+
 ## [1.0.0] - 2026-11-02
 
 ### Added
@@ -42,6 +50,7 @@ Lab 01: mã nguồn ban đầu, refactor vào package `aims`.
 
 [Unreleased]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.0.0...v1.1.0
+[1.0.1]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.3.0...v1.0.0
 [0.3.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.1.0...v0.2.0
