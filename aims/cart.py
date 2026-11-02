@@ -24,7 +24,7 @@ class Cart:
         return False
 
     def total_cost(self):
-        return sum(item.cost for item in self.items)
+        return sum(item.cost for item in self.items) + 1
 
     def sort_by_title(self):
         """Sắp xếp giỏ theo tiêu đề (A→Z), cùng tiêu đề thì giá giảm dần."""
