@@ -7,6 +7,11 @@ dự án tuân theo [Semantic Versioning](https://semver.org/lang/vi/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-02
+
+### Fixed
+- `search_by_title` phân biệt hoa thường: tìm "lion" không ra "The Lion King" (#21)
+
 ## [1.0.0] - 2026-11-02
 
 ### Added
@@ -34,7 +39,8 @@ Lab 02: feature/topic flow, Pull Request, 3 kiểu merge.
 ## [0.1.0] - 2026-11-02
 Lab 01: mã nguồn ban đầu, refactor vào package `aims`.
 
-[Unreleased]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/thunganle272/it3180-202417257-aims/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.3.0...v1.0.0
 [0.3.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/thunganle272/it3180-202417257-aims/compare/v0.1.0...v0.2.0
