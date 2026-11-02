@@ -14,6 +14,18 @@ Sinh viên: Lê Thu Ngân – MSSV 202417257
   (`feature/show-added-title`) báo *CONFLICTING*; giải quyết bằng cách 1
   (`git merge origin/master`), kết hợp thành
   `print(f"Đã thêm đĩa '{dvd.title}' vào giỏ hàng")`, chạy test rồi mới commit.
+- Hoàn tác trên nhánh nháp `topic/undo-practice` (KHÔNG push), commit tập dượt
+  `chore: undo practice commit` (thêm `undo-note.txt`):
+  ```
+  $ git reset --soft HEAD~1     # status: "A  undo-note.txt"  → thay đổi về STAGING
+  $ git reset --mixed HEAD~1    # status: "?? undo-note.txt"  → thay đổi về WORKING DIR
+  $ git reset --hard HEAD~1     # HEAD is now at fde6bf5; undo-note.txt biến mất
+  $ git reflog -2
+  fde6bf5 HEAD@{0}: reset: moving to HEAD~1
+  1a41a3b HEAD@{1}: checkout: moving from master to topic/undo-practice
+  $ git reset --hard 1a41a3b    # tìm lại commit "đã mất" → undo-note.txt quay lại
+  ```
+  Sau đó xóa nhánh nháp (`git branch -D topic/undo-practice`).
 - Hoàn tác lịch sử chung: PR #14 `git revert -m 1 fde6bf5` (merge commit của PR #13).
 - `master` hiện có 4 tests OK.
 
