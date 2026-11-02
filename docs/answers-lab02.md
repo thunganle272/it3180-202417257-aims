@@ -7,6 +7,14 @@ Sinh viên: Lê Thu Ngân – MSSV 202417257
 - Branch protection cho `master`: Require a pull request, **Require approvals = 0**
   (theo hướng dẫn cho trường hợp làm một mình), Dismiss stale approvals,
   Do not allow bypassing.
+- Kiểm tra push thẳng lên `master` bị chặn:
+  ```
+  $ git push origin HEAD:master
+  remote: error: GH006: Protected branch update failed for refs/heads/master.
+  remote: - Changes must be made through a pull request.
+  remote: - Required status check "test" is expected.
+   ! [remote rejected] HEAD -> master (protected branch hook declined)
+  ```
 - "Dev 2" được mô phỏng bằng bản clone thứ hai `aims-dev2`.
 - GitHub không cho tác giả tự *Approve* / *Request changes* PR của mình, nên ở
   PR #4 (`feature/cart-print`) bước review được thực hiện bằng review comment

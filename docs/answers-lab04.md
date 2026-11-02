@@ -7,7 +7,17 @@ Sinh viên: Lê Thu Ngân – MSSV 202417257
 - Annotated tag (`git tag -n`):
   `v0.1.0 Lab 01 release` · `v0.2.0 Lab 02 release` · `v0.3.0 Lab 03 release` ·
   `v1.0.0 AIMS-mini 1.0.0 - Lab 04 release`.
-- `v1.0.0` trùng đầu `release/lab04` (`31fcbbd`).
+- `v1.0.0` trùng đầu `release/lab04` (`31fcbbd`) tại thời điểm phát hành
+  (sau hotfix Lab 05, đầu nhánh là `3db10ec` = `v1.0.1`; tag `v1.0.0` không di chuyển).
+- Rule `release/*`: Require PR, no bypass, ✘ force push, ✘ deletion. Push thẳng bị chặn:
+  ```
+  $ git push origin HEAD:release/lab04
+  remote: error: GH006: Protected branch update failed for refs/heads/release/lab04.
+  remote: - Changes must be made through a pull request.
+   ! [remote rejected] HEAD -> release/lab04 (protected branch hook declined)
+  ```
+- GitHub Release: https://github.com/thunganle272/it3180-202417257-aims/releases/tag/v1.0.0
+  (tag có sẵn `v1.0.0`, nội dung mục `[1.0.0]` của CHANGELOG + generated release notes).
 - Status accounting:
   - `git log --oneline release/lab04..master` → `feat: add sort_by_title and sort_by_cost to Cart` + merge PR #17
   - `git log --oneline master..release/lab04` → **rỗng** (release không có gì master không có)

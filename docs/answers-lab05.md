@@ -35,6 +35,8 @@ Sinh viên: Lê Thu Ngân – MSSV 202417257
   ```
 - Mở rộng CI: `.github/workflows/ci.yml` (PR #25, job `test` pass);
   `bugfix/ci-demo` cố ý làm hỏng `total_cost` → PR #26 job `test` **fail** (không merge).
+  Sau khi bật *Require status checks to pass* (`test`) cho `master`, PR #26 chuyển
+  sang `mergeStateStatus: BLOCKED` → nút Merge bị khóa; PR được đóng, không merge.
 
 ## Vì sao ở Phần A chưa gắn tag v1.1.0?
 
