@@ -9,6 +9,7 @@ dự án tuân theo [Semantic Versioning](https://semver.org/lang/vi/).
 
 ### Added
 - `Cart.sort_by_title()`, `Cart.sort_by_cost()`: sắp xếp giỏ hàng theo tiêu đề / theo giá
+- `search_by_category()` trong `aims/search.py`: tìm đĩa theo thể loại
 
 ## [1.0.0] - 2026-11-02
 
